@@ -1,0 +1,146 @@
+\section*{Request for Cloud Computing Resources}
+\label{sec:supplement-cloud}
+% If requesting cloud computing resources, include a description of the requests (not to exceed 2 pages) as a supplementary document that includes:
+% (1) title of the proposal;
+% (2) institution name,
+% (3) the anticipated total cost of computing resources, with yearly breakdown;
+% (4) which public cloud providers will be used; and
+% (5) a technical description and justification of the request, along with how the cost was estimated.
+% The NSF Budget should not include any such costs for accessing public cloud computing resources via CloudBank.org. The total cost of the project, including this cloud computing resource request from CloudBank.org, may not exceed the budget limits for project class of the proposal, as described in this solicitation.
+
+\begin{description}
+  \item[Proposal Title:] \hfill \\ Collaborative Research: Frameworks: OpenEarthscape---Transformative Cyberinfrastructure for Modeling and Simulation in the Earth-Surface Science Communities
+  \item[Institution:] \hfill \\ University of Colorado Boulder
+  \item[Anticipated Costs of Computing Resources:]
+\end{description}
+
+\begin{center}
+\begin{tabular}{ ||c|r|| } 
+ \hline
+ Award Period & Estimated Cost (USD) \\ [0.5ex]
+ \hline\hline
+ Year 1 & 7,772.95 \\ 
+ Year 2 & 8,006.14 \\ 
+ Year 3 & 8,246.32 \\ 
+ Year 4 & 8,493.71 \\ 
+ Year 5 & 8,748.52 \\
+ \hline
+ Total  & 41267.64 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+The table displays a series of one-year estimates, and assumes 3\% inflation.
+A description of the how the estimates were calculated is given below.
+
+\begin{description}
+  \item[Public Cloud Provider:] \hfill \\ Amazon Web Services (AWS) through CloudBank
+\end{description}
+
+
+\subsection*{Description and Justification}
+
+We request funds for three AWS Elastic Compute Cloud (EC2) instances through CloudBank, each with a distinct use case, as described below.
+The Amazon Calculator was used to provide an estimated cost for each instance.
+The estimates use the one-year, no up-front payment formula, so they likely represent the high end of the cost range for each instance---discounts would be applied for partial up-front payment and for purchasing reserved instances.
+Money will also be saved by scaling down instances that aren't being used to capacity.
+We have experience estimating monthly costs from running a set of EC2 instances starting in June 2020.
+
+\subsubsection*{OpenEarthscape Lab}
+
+The first EC2 instance, called \textit{Lab},
+will provide a platform for community members to teach classes,
+primarily through Jupyter Notebooks running on a JupyterHub
+that we will provision and maintain on the instance.
+The proposal team has experience in setting up a JupyterHub,
+and it was used successfully by three instructors to teach undergraduate classes
+of 8-12 students each in the Fall 2020 semester.
+Access to this instance is controlled:
+instructors provide a class roster,
+and a login is created for each student.
+Students are allowed to set their own password.
+Instructors can use their own Notebooks,
+and also choose from a set of pre-installed Notebooks
+from the CSDMS EKT Repository.
+
+The EC2 instance we chose for \textit{Lab} has the following specifications:
+
+\begin{center}
+\begin{tabular}{ |l|l|c|c|c|r| } 
+ \hline
+ Name & Instance Type & vCPUs & Memory (GB) & Storage (GB) & Monthly Cost (USD) \\ [0.5ex]
+ \hline
+ \textit{Lab} & t3a.2xlarge & 8 & 32 & 50 & 173.25 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\noindent
+which are similar to the instance used for the Fall 2020 classes.
+This instance is intended to be stable.
+It will remain running continuously through a semester so students and instructors will have access to it at any time.
+To save money, the underlying EC2 instance will be scaled down during semester breaks.
+
+\subsubsection*{OpenEarthscape Frontier}
+
+The second instance, \textit{Frontier}, will provide a platform for OpenEarthscape community members and staff to run interactive educational workshops for 20-50 participants.
+As with \textit{Lab}, a JupyterHub will be the key software element;
+it will be used to deploy content and control access to the instance.
+A simple authenticator, using a single, shared password provided to the participants at the start of a workshop, then changed afterward, will be used.
+Unlike \textit{Lab}, where content persists through a semester, the content on this instance will be updated between each workshop.
+
+The specifications for the \textit{Frontier} EC2 instance will be:
+
+\begin{center}
+\begin{tabular}{ |l|l|c|c|c|r| } 
+ \hline
+ Name & Instance Type & vCPUs & Memory (GB) & Storage (GB) & Monthly Cost (USD) \\ [0.5ex]
+ \hline
+ \textit{Frontier} & t3a.large & 2 & 8 & 50 & 49.86 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\noindent
+Depending on the number of participants, the underlying EC2 instance may be scaled up for the duration of the workshop, then scaled down again afterward.
+The estimate provided here is an attempt at a median value for costs when a few days of a larger, pricier instance are used between much longer periods with a smaller, less costly instance.
+
+\subsubsection*{OpenEarthscape Cloud}
+
+The third instance, \textit{Cloud}, will provide a computational platform on which community members can run models.
+Access to the instance will be controlled with a JupyterHub.
+Users can login to the instance and use the Jupyter Terminal application for configuring and running jobs.
+In lieu of a job scheduler, OpenEarthscape staff will maintain a signup sheet (e.g., Google Forms or Slottr) where community members can sign up for blocks of time on the \textit{Cloud} instance. Access will be limited to the user for their scheduled block.
+This instance is intended as a training ground for researchers who want to model with a cloud computing service.
+
+We chose a more powerful EC2 instance for this service:
+
+\begin{center}
+\begin{tabular}{ |l|l|c|c|c|r| } 
+ \hline
+ Name & Instance Type & vCPUs & Memory (GB) & Storage (GB) & Monthly Cost (USD) \\ [0.5ex]
+ \hline
+ \textit{Cloud} & m5a.4xlarge & 16 & 64 & 250 & 424.64 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\noindent
+Although the estimated cost of this instance is higher than others, it may end up being substantially less than the stated cost, since the underlying EC2 instance will be scaled down when the service is not in use.
+The estimated cost of this instance includes 100 GB/month data transfer out of the instance (transfer in is free).
+
+%\textbf{OpenEarthscape Lab}
+%Run a JupyterHub to provide a platform for community members to teach classes. They can use labs (in the form of Jupyter Notebooks) from the CSDMS EKT Repository. Or they can create custom Notebooks. We have a pretty good handle on how this works, with classes run by Overeem (CU), Ortiz (Colby), and Crosby (Idaho State) in the Fall 2020 semester, with a total enrollment of XX students in the three courses. Also ESPIn! Use a medium instance. Don't scale it. Class sizes tend to be 8-12 students.
+
+%\textbf{OpenEarthscape Cloud}
+%Run simulations online. Set up a JupyterHub and use it to control access. Possibly make this instance scalable, but throttled. Pitch this as a training ground for modeling with a cloud computing service. This is still a bit hazy. Used by only a few users at a time. A drawback is that we don't have a job scheduler. Perhaps we can have a sign-up sheet (Google Form? or maybe just a Google Sheet) for compute time. Use DummyAuthenticator and change the password so only the person scheduled to use the instance can login. Do we have any demand for this? It'll be an expensive piece of cloud service to sit unused. Possible solution: we can persist a small instance, then scale up/down based on the signup sheet. Use a medium instance, constant usage for the estimate. Estimate includes cost for 100 GB/month data transfer out.
+
+%\textbf{OpenEarthscape Workbench}
+%Run a JupyterHub that demonstrates the functionality of CSDMS products (Landlab, pymt, BMI). Use it in workshops. Also allows community members to try our warez. We have a pretty good handle on how this works, with workshops run at 2020 AGU, 2020 CSDMS, 2020 GSA, as well as smaller workshops with customized content by researchers in the community (Gasparini). Use a smaller instance, then Scale it up/down for presentations. Workshop sizes tend to be 20-50 people. We estimate 6-9 workshops per year. Always on in minimal state; scale up for workshops.
+
+
+%How did we estimate costs? Through AWS Calculator (TODO; show work here), and through our experience in configuring and running a JupyterHub on AWS from 2020 June through 2020 October (the time of this submission).
+
+%Estimates based on one-year, no up-front payment, so they represent the maximum cost for each instance. Discounts would be applied for partial up-front payment and for purchasing reserved instances.
+
+%Note that the *t3* EC2 instances allow billing in "bursts", measured in minutes, decreasing the cost of providing an always-on compute resource.

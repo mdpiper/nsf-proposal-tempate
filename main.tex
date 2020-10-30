@@ -1,0 +1,109 @@
+\documentclass{proposalnsf}
+
+\usepackage[numbers]{natbib}
+
+\usepackage{url}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{wrapfig}
+\usepackage[font={small,it}]{caption}
+\usepackage{float}
+\usepackage{paralist}
+\usepackage{tabularx}
+\usepackage{longtable}
+
+% Define table column formats
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% Separate bibliography for results from prior refs not cited in description
+\usepackage{multibib}
+\newcites{rfp}{References for Results from Prior}
+
+% Side captions
+%\usepackage{sidecap}
+%\sidecaptionvpos{figure}{c}  % vertical centering
+
+\usepackage{tikz} % for icons indicating sci themes -GT
+
+\newcommand*\scitheme[1]{\tikz[baseline=(char.base)]{
+    \node[shape=rectangle,fill={rgb:red,1;green,2;blue,5},draw,inner sep=2pt] (char) {\fontfamily{phv}\selectfont
+\textsc{#1}};}}
+
+\definecolor{coastcolor}{RGB}{153,204,255}
+\newcommand*\scithemec[1]{\tikz[baseline=(char.base)]{
+    \node[shape=rectangle,fill=coastcolor,draw,inner sep=2pt] (char) {\fontfamily{phv}\selectfont
+\textsc{#1}};}}
+
+\definecolor{bothcolor}{RGB}{153,153,0}
+\newcommand*\scithemeb[1]{\tikz[baseline=(char.base)]{
+    \node[shape=rectangle,fill=bothcolor,draw,inner sep=2pt] (char) {\fontfamily{phv}\selectfont
+\textsc{#1}};}}
+
+\definecolor{terrcolor}{RGB}{255,220,130}
+\newcommand*\scithemet[1]{\tikz[baseline=(char.base)]{
+    \node[shape=rectangle,fill=terrcolor,draw,inner sep=2pt] (char) {\fontfamily{phv}\selectfont
+\textsc{#1}};}}
+
+\newcommand*\scitem[1]{\vspace{3pt}\noindent\textbf{#1}}
+
+
+\begin{document}
+
+% Project Summary
+\title{\textbf{Collaborative Research: Frameworks: OpenEarthscape---Transformative Cyberinfrastructure for Modeling and Simulation in the Earth-Surface Science Communities}}
+\input{sections/summary}
+
+% Project Description
+\newpage
+\setcounter{page}{1}
+\input{sections/description}
+
+% References
+\newpage
+\setcounter{page}{1}
+\renewcommand{\thepage} {R--\arabic{page}}
+\renewcommand\refname{References Cited}
+\bibliographystyle{agufull08}
+\bibliography{references,rfp_references}
+\input{sections/nocite}
+\bibliographystylerfp{agufull08}
+\bibliographyrfp{rfp_references}
+
+% Management Plan
+\newpage
+\pagenumbering{arabic}
+\input{sections/management}
+
+% Delivery Mechanism and Community Usage Metrics
+\newpage
+\setcounter{page}{1}
+\input{sections/delivery}
+
+% Facilities, Equipment and Other Resources
+\newpage
+\setcounter{page}{1}
+\input{sections/resources}
+
+% Data Management Plan
+\newpage
+\setcounter{page}{1}
+\input{sections/data}	
+
+% NSF CloudBank
+\newpage
+\setcounter{page}{1}
+\input{sections/cloud}  
+
+% Mentoring Plan
+\newpage
+\setcounter{page}{1}
+\input{sections/mentoring}
+
+% Project Personnel
+\newpage
+\setcounter{page}{1}
+\input{sections/personnel}
+
+\end{document}

@@ -1,0 +1,208 @@
+\section*{Facilities, Equipment, and Other Resources}
+
+\subsection*{University of Colorado Boulder}
+
+The University of Colorado Boulder (CU Boulder) is a comprehensive Research 1 public university with a long tradition of interdisciplinary research. CU Boulder enjoys formal research relationships with nearby national research laboratories, including NIST, NOAA, NCAR/UCAR, USGS, and NREL, as well as numerous industry partners.
+
+\subsubsection*{Visitor space}
+
+The Institute of Arctic and Alpine Research (INSTAAR) is the anchor of the new Sustainability, Energy and Environment Community (SEEC) campus in the CU Boulder Research Park. 
+The SEEC campus provides a major conference facility, including an auditorium, ten conference rooms, six classrooms, and a cafeteria. 
+All conference rooms, classrooms, and the auditorium are equipped with projectors and projector screens. 
+The entire SEEC campus has wireless internet access. Open-plan desk space is available in the area of the building occupied by the CU Boulder project team for visiting graduate students and their advisors.
+
+%\subsubsection*{Main auditorium}
+
+%The main auditorium (C120) dimensions are 44' x 53'.When combined with the side rooms C120A/B and C120 C/D), the dimensions are 79’ x 50’.SEEC has 300 chairs total for use in the rooms.The main auditorium can fit approximately 250 chairs.The side rooms can seat individually 30 to 60 depending on format.C120A/B is 17’ x 50’ when combined.C120A is 17’ x 25’, C120B is 17’ x 25’.C120C/D is 18’ x 49’ when combined.C120C is 18’ x 24’ and C120D is 18’ x 25’. The rooms are separated by soundproof, movable walls and can be divided in five, four, three, two or one separate spaces. Maximum room occupancy limits are C120 (412), C120A (81), C120B (64), C120C (82), C120D (65), for a total of 704.
+
+%The auditorium has a ceiling-mounted Epson G7905UNL 7000-lumen projector and 137-inch tensioned motorized screen with HDMI, VGA, and Mini DisplayPort connections. A Vaddio RoboSHOT 30x HD PTZ rear camera and Vaddio RoboSHOT 12x HD PTZ front camera provide web-based video conferencing. For voice amplification, the room is equipped with two Shure WL185-lavalier microphones and two Shure SM58 handheld microphones. The auditorium comes with two floor microphone stands and two table top microphone stands. Wall-mounted JBL line array speakers are positioned on the front wall for program audio, while ceiling-mounted speakers provide voice reinforcement. There is an ADA-compliant height-adjustable motorized lectern.
+
+%The side rooms each have a ceiling-mounted Epson 2255U 5000-lumen projector and 137-inch tensioned motorized screen with HDMI and VGA connections. The content display can be duplicated across screens. Recording is provided by software-based applications running on a laptop connected to the system.
+
+\subsection*{Computing}
+
+\subsubsection*{Web Server}
+
+For this project, a web server is made available through the NSF-funded Community Surface Dynamics Modeling System (CSDMS) and the mainly NASA-funded Dartmouth Flood Observatory (DFO).
+The web server is a Dell PowerEdge R730 Server.
+It contains:
+\begin{compactitem}
+\item 8 x 16GB RAM memory capacity
+\item 2 Intel Xeon E5-2630 v3 2.4GHz, 20M Cache, 8.00GT/s QPI, Turbo, HT, 8 core/16T (85W) processors
+\item 8 x 4TB hard drives configured as a RAID 6 to minimize data loss in the event of a hard drive failure.
+\end{compactitem}
+The multi-terabyte RAID system is configured such that two hard drives can fail simultaneously without data loss. Additionally, critical data are backed up daily using a 41 TB ReadyNAS RN4220S backup server supported by the CSDMS program.
+
+\subsubsection*{Blanca}
+
+For this project, CSDMS has made available four compute nodes in a modular high-performance computing cluster (HPCC), \textit{Blanca}, that is hosted in a larger compute facility operated by the CU Boulder Research Computing division. Each compute node on \textit{Blanca} consists of:
+\begin{compactitem}
+\item 2x 14-core 2.4 GHz Intel “Broadwell” processors
+\item 128 GB RAM at 2400 MHz
+\item 1x1 TB 7200 RPM hard drive
+\item 10 gigabit/s Ethernet
+\end{compactitem}
+These nodes are intended to be used as a testing and learning facility. They are free to use (no allocation needed) for OpenEarthscape and CSDMS members. Additional nodes on \textit{Blanca} can be used when not in use by their owners. \textit{Blanca} is supported by Uninterruptible Power Supply (UPS) in the event of a power failure and data (other than stored in the `scratch' folder) is backed up.
+
+\subsubsection*{Summit}
+
+Users in need of additional compute time, with models that have matured from a testing phase, can make use of the HPCC \textit{Summit}, also operated by the CU Boulder Research Computing division.
+%Summit has been operational since February 2017.
+Summit is a heterogeneous supercomputing cluster based primarily on the Intel Xeon "Haswell" CPU, with additional NVidia Tesla K80 and high-memory nodes. All nodes sit on a first-generation Intel Omni-Path Architecture interconnect which also provides access to an IBM GPFS Parallel scratch file system. Summit consist of:
+
+\noindent
+\textbf{General Compute nodes}:
+\begin{compactitem}
+\item 380 nodes
+\item CPU: Intel Xeon E5-2680 v3 @ 2.50GHz (2 CPUs/node, 24 cores/node)
+\item Memory: 2133 MT/s, Dual Rank, x4 Data Width RDIMM, (8x16GB, 128GB/node)
+\item Local storage: 200 GB SSD (1/node)
+\end{compactitem}
+
+\noindent
+\textbf{GPU compute nodes}:
+\begin{compactitem}
+\item 10 nodes
+\item CPU: Intel Xeon E5-2680 v3 @ 2.50GHz (2 CPUs/node, 24 cores/node)
+\item Memory: 2133 MT/s, Dual Rank, x4 Data Width RDIMM (8x16GB, 128GB/node)
+\item Local storage: Local storage
+\item GPU accelerator: Nvidia Tesla K80 (2/node)
+\end{compactitem}
+
+\noindent
+\textbf{High-memory compute nodes}:
+\begin{compactitem}
+\item 5 nodes
+\item CPU: Intel Xeon CPU E7-4830 v3 @ 2.10GHz (4 CPUs/node, 48 cores/node)
+\item Memory: 2133 MT/s, Dual Rank, x4 Data Width RDIMM (64x32GB, 2TB/node)
+\item Local storage: 1TB 7.2K RPM, 6Gbps Near Line SAS 2.5" Hard Drive (12/node)
+\end{compactitem}
+
+\noindent
+\textbf{Phi nodes}:
+\begin{compactitem}
+\item 20 Nodes
+\item CPU: Intel Xeon Phi "Knights Landing" processor (1/node)
+\item Memory: 128 GiB/node
+\item Local storage: 200 GB SSD
+Data storage on Summit is only for short term and people can make use of the 1.2 PB Scratch storage space that is available.
+\end{compactitem}
+
+\subsubsection*{Data Storage}
+
+Researchers using either \textit{Blanca} or \textit{Summit} have a home directory with 2 GB of storage and a project directory with 250 GB of storage.
+% Can't talk about $$$ in Facilities and Equipment.
+% Additional storage is provided as part of a storage condominium at a cost of \$100 per TB for single copy storage.
+Tape and Hierarchical Storage Management (HSM) are additional storage options that are available for archive data.
+
+\subsubsection*{PetaLibrary}
+
+The two main categories of services offered to members of the PetaLibrary are Active storage for data that need to be accessed frequently, and Archive storage for data that are accessed infrequently. Active data is always stored on disk and is accessible to researchers on compute resources managed by Research Computing. Archive storage consists of a two-level HSM solution, with disk storage for data that are more likely to be accessed, and tape storage for data that are less likely to be accessed.
+
+% No money talk in F&M
+% The cost is $100/TB/year for disk and $20/TB/year for tape.
+
+\subsection*{Peripherals}
+
+Color printers, Color Scanners, and a HP Design Jet 5000PS 60” plotter are available for the meeting and if needed participants can print their poster for market price.
+
+\subsection*{Server Security}
+
+Physical access to the web server is restricted. The Facilities electronic locking system is managed by CU Boulder Access Services. The user list is controlled and kept up-to-date. The server OS is RedHat Enterprise with up-to-date patches. For remote logins, clear-text protocols (i.e. FTP, Telnet) are blocked; SSH connections apply. Login from peripheral PCs and Macs is via SSH and requires username and password. The University of Colorado campus firewall is part of a comprehensive and broad-based Office of Information Technology security program to protect campus users and its servers from malicious online attacks. The meeting website will be hosted on the server described above and protected by the CU Boulder firewall.
+
+
+\subsection*{Other Resources}
+
+The following sections outline the work of unfunded collaborators who have provided
+Letters of Collaboration. Collaboration falls into three categories of OpenEarthscape activities
+as described in the proposal: \textit{Computational Summer Science Program},
+\textit{Promoting Diversity in Geosciences} (Section \ref{sec:promoting-diversity}), and
+\textit{OpenEarthscape Software Council} (Section \ref{sec:software-council}).
+
+\subsubsection*{Computational Summer Science Program: Faculty Participants and Projects}
+
+The following collaborators will participate in the proposed Summer Science Program
+where they and one or more of their graduate students will visit the OpenEarthscape
+facility at CU Boulder and work on their identified project using OpenEarthscape tools.
+
+\begin{compactitem}
+\item \textbf{Dr. Kim de Mutsert} (University of Southern Mississippi): \textit{Coastal Ecosystems in a Deltaic Environment}
+
+\item \textbf{Dr. Alejandra C. Ortiz} (Colby College): \textit{Coastal Geomorphology}
+
+\item \textbf{Dr. Talea L. Mayo} (Emory University): \textit{Geohazards, uncertainty quantification, and machine learning}
+
+\item \textbf{Dr. Moira Zellner} (Northeastern University in Boston): \textit{Human dimensions of geoprocesses and geohazards}
+
+\item \textbf{Dr. Michael S. Steckler} (Columbia University): \textit{3D Basin Stratigraphy Modeling}
+
+\item \textbf{Dr. Mark Behn} (Boston College): \textit{Geodynamics}
+
+\item \textbf{Dr. Paola Passelacqua} (The University of Texas at Austin): \textit{Using high-resolution topography data to improve models}
+
+\item \textbf{Dr. Simon K\"ubler} (University of Munich): \textit{Paleolakes, Topography, and Migration Patterns}
+
+\item \textbf{Dr. Ciaran Harman} (Johns Hopkins): \textit{Coevolution of Hydrology and Topography}
+
+\end{compactitem}
+
+
+\subsubsection*{Promoting Diversity in Geosciences}
+
+To help broaden diversity in the geosciences, we partner with the following
+collaborators, each of whom represent an existing program dedicated to
+increasing diversity of students entering the geosciences (Section \ref{sec:promoting-diversity}).
+
+\begin{compactitem}
+\item \textbf{Dr. Anne Gold} (University of Colorado): \textit{RECCS---Research Experience for Community College Students}
+
+\item \textbf{Dr. Keith Maull \& Ms. Kadidia Thiero} (UCAR---University Corporation for Atmospheric Research): \textit{SOARS--Significant Opportunities in Atmospheric Research and Science}
+
+\item \textbf{Dr. Donna J. Charlevoix} (UNAVCO): \textit{RESESS---Research Experiences in Solid Earth Science for Students}
+
+\end{compactitem}
+
+
+\subsubsection*{OpenEarthscape Software Council}
+% \ref{sec:software-council}
+
+The following collaborators will participate in the OpenEarthscape Software Council
+(Section \ref{sec:software-council}) to define, promote, and guide the community
+software products developed through OpenEarthscape.
+
+\begin{compactitem}
+
+\item \textbf{Dr.\ H.R.A. Jagers} (Deltares)
+
+\item \textbf{Dr.\ N. Drost} (Netherlands eScience Center)
+
+\item \textbf{Dr.\ Joseph Hughes} (U.S. Geologic Survey)
+
+\item \textbf{Dr.\ Christian Langevin} (U.S Geologic Survey)
+
+\item \textbf{Mr.\ Richard McDonald} (U.S. Geologic Survey)
+
+\item \textbf{Dr.\ Parker Norton} (U.S. Geologic Survey)
+
+\item \textbf{Dr.\ Jared Bales} (CUAHSI---Consortium of Universities for the Advancement of Hydrologic Science)
+
+\end{compactitem}
+
+% Scientific Steering Commitee
+% I'm not sure, but I think Jared is the only letter we have for the
+% SSC. I believe all of the above are for the Software Council. Is
+% that right? Yes. -MP
+% \textbf{Dr. Jared Bales} (Consortium of Universities for the Advancement of Hydrologic Science)
+
+
+
+
+
+
+
+
+
+
+
+
+
